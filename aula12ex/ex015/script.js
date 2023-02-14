@@ -3,7 +3,7 @@ function verificar() {
     var ano_atual = data.getFullYear()
     var formul_ano = document.getElementById('txtano')
     var res = document.getElementById('res')
-    if (formul_ano.value == 0 || Number(formul_ano.value) > ano_atual) {
+    if (formul_ano.value.length == 0 || Number(formul_ano.value) > ano_atual) {
         alert('[ERRO] Verifique os dados e tente novamente')
     } else {
         var fsexo = document.getElementsByTagName('radsex')
