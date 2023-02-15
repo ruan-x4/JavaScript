@@ -1,12 +1,18 @@
 function gerar() {
-    var valor = document.getElementById('num1')
-    var resultado = document.getElementById('tabuada')
-    resultado.innerHTML = 'Digite um número acima'
+    let valor = document.getElementById('num1')
+    let resultado = document.getElementById('tabuada')
+    
     if (valor.value.length == 0) {
         alert('Por favor, digite um número!')
+        resultado.innerHTML = 'Digite um número acima'
     } else {
+        resultado.innerHTML = ''
+        let n = Number(valor.value)
         for (c = 1; c <= 10; c++) {
-            resultado.innerHTML += ` <br> ${valor.value} x ${c} = ${valor.value * c} `
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n * c} `
+            item.value = `resultado${c}`
+            resultado.appendChild(item)
         }
     }
     
