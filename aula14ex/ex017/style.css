@@ -17,6 +17,10 @@ section {
     box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.219);
 }
 
+div#tabuada {
+    overflow-y: 20vh;
+}
+
 footer {
     color: white;
     text-align: center;
